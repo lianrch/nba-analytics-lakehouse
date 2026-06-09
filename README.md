@@ -1,56 +1,36 @@
 # NBA Analytics Lakehouse
 
-Projeto de Engenharia de Dados focado em analytics da NBA utilizando arquitetura moderna de Data Lake e Data Warehouse.
+Projeto de Engenharia de Dados focado em analytics da NBA.
 
-## Tecnologias
+## Stack
 
 - Python
 - PostgreSQL
 - Docker
-- Airflow
-- AWS S3
-- Power BI
-- GitHub Actions
+- SQLAlchemy
+- NBA API
+- Git/GitHub
 
 ## Arquitetura
 
-```text
 NBA API
-   ↓
-Bronze Layer
-   ↓
-Silver Layer
-   ↓
-Gold Layer
-   ↓
-PostgreSQL
-   ↓
-Power BI
-```
+↓
+Raw Layer (CSV)
+↓
+Bronze Layer (PostgreSQL)
+↓
+Silver Layer (em construção)
+↓
+Gold Layer (em construção)
 
-## Estrutura do Projeto
+## Status
 
-```text
-nba-analytics-lakehouse/
-
-├── airflow
-├── dashboards
-├── data
-├── docker
-├── docs
-├── notebooks
-├── src
-└── tests
-```
-
-## Roadmap
-
-- [ ] Setup do ambiente
-- [ ] Ingestão NBA API
-- [ ] Camada Bronze
-- [ ] Camada Silver
-- [ ] Camada Gold
-- [ ] PostgreSQL
+- [x] Infraestrutura Docker
+- [x] PostgreSQL
+- [x] Conexão SQLAlchemy
+- [x] Ingestão de Times NBA
+- [ ] Ingestão de Jogos
+- [ ] Ingestão de Jogadores
 - [ ] Airflow
 - [ ] AWS S3
-- [ ] Dashboard Power BI
+- [ ] Dashboard
